@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>엘르보이스 | No.1 Fashion Media</title>
+	<meta name="format-detection" content="telephone=no">
+	<!-- css, Jquery -->
+    <link rel="stylesheet" type="text/css" href="../../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/atcView.css" />
+    <link rel="stylesheet" type="text/css" href="../../resources/css/content.css" />
+	<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+	<!-- //css, Jquery -->
+</head>
+<body>
+	<div id="wrap" class="wrap">
+		<!-- header -->
+		<header id="header" class="header">
+			<div class="header_wrap">
+				<div class="header_cont">
+					<div class="cont_inner">
+						<h1 class="logo"><a href="./index.html"><img src="../../resources/images/logo_ellevoice.svg" alt="엘르보이스"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
+
+						<div class="header_navi">
+							<ul> 
+								<li class="has_sub_menu">
+									<a href="#">ESSAY</a>
+									<div class="sub_menu">
+										<ul class="sub_menu_list">
+											<li class="ssm_item"><a href="#">WRITERS</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="#">NEWSLETTER</a></li>
+								<li><a href="#">COLLABORATION</a></li>
+								<li><a href="#">COMMUNITY</a></li>
+								<li><a href="#">MYPAGE</a></li>
+							</ul>
+						</div>
+						<div class="header_util">
+							<div class="aside">
+								<a href="#">LOGIN</a><!-- D: LOGOUT -->
+								<a href="https://trend.jtbcplus.kr/member/regist">SIGNUP</a><!-- D: MYPAGE -->
+							</div>
+							<a href="https://page.stibee.com/subscriptions/104414" class="btn_subscription">구독신청</a><!-- D: 구독신청 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+						</div>
+
+						<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+					</div>
+				</div>
+
+				<!-- D: 플로팅바 영역 -->
+				<div class="floating_bar">
+					<div class="cont_inner">
+						<div class="detail_info">
+							<!-- 브레드크럼 -->
+							<div class="breadcrumb">
+								<a href="#" class="home">HOME</a>
+								<a href="#" class="cate_dep">COLLABORATION</a>
+							</div>
+							<!-- //브레드크럼 -->
+							<!-- 기사 타이틀 -->
+							<div class="txtbox">
+								<p class="tit"> 
+									우리 마음 빼빼로로 말해요.
+								</p>
+							</div>
+							<!-- //기사 타이틀 -->
+							<!-- 스크랩, 공유하기 -->
+							<div class="sharebox">
+								<button type="button" class="btn_ico scrap js-btn-scrap"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
+								<button type="button" class="btn_ico share" data-layer-open="popup_share"><span class="blind">공유하기</span></button>
+							</div>
+							<!-- //스크랩, 공유하기 -->
+						</div>
+					</div>
+				</div>
+				<!-- //D: 플로팅바 영역 -->
+			</div>
+
+			<!-- D: [팝업] 공유하기 -->
+			<div class="popup_layer pop_share" data-layer="popup_share">
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_tit">
+							<h3 class="tit">공유하기</h3>
+						</div>
+						<div class="popup_close">
+							<button type="button" class="btn_close" data-layer-close="popup_share"><span class="blind">닫기</span></button>
+						</div>
+					</div>
+					<div class="popup_cont">
+						<div class="sns_list">
+							<ul>
+								<li><button type="button" class="btn_sns talk"><span class="tit">카카오톡</span></button></li>
+								<li><button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button></li>
+								<li><button type="button" class="btn_sns twitter"><span class="tit">X</span></button></li>
+								<li><button type="button" class="btn_sns copy" data-alert-open="alert_1"><span class="tit">복사</span></button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //D: [팝업] 공유하기 -->
+		</header>
+		<!-- //header -->
+
+		<!-- 전체메뉴 -->
+		<div class="allmenu_wrap"><!-- D: 오픈 시 open 클래스 추가 -->
+			<div class="allmenu_dimmed"></div>
+			<div class="allmenu_area">
+				<div class="allmenu_cont">
+					<!-- 상단 닫기 영역 -->
+					<div class="top_area">
+						<button type="button" class="btn_menu_close"><span class="blind">닫기</span></button>
+					</div>
+					<!-- //상단 닫기 영역 -->
+
+					<div class="scroll_custom">
+						<div class="allmenu_inner">
+							<!-- 로그인/회원가입 -->
+							<div class="allmenu_util">
+								<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
+								<a href="https://trend.jtbcplus.kr/member/regist" target="_blank" title="새창열림">SIGNUP</a>
+							</div>
+							<!-- //로그인/회원가입 -->
+
+							<!-- 메뉴 -->
+							<!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
+							<div class="allmenu_list">
+								<ul class="depth1">
+									<li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
+										<a href="#">ESSAY<span><em class="blind">열기</em></span></a>
+										<ul class="depth2">
+											<li><a href="#">WRITERS</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">NEWSLETTER<span><em class="blind">열기</em></span></a>
+									</li>
+									<li>
+										<a href="#">COLLABORATION<span><em class="blind">열기</em></span></a>
+									</li>
+									<li>
+										<a href="#">COMMUNITY<span><em class="blind">열기</em></span></a>
+									</li>
+									<li>
+										<a href="#">MY PAGE<span><em class="blind">열기</em></span></a>
+									</li>
+								</ul>
+							</div>
+							<!-- //메뉴 -->
+
+							<!-- 외부링크 -->
+							<div class="etc_link">
+								<ul>
+									<li><a href="#" target="_blank" title="새창열림">ELLE</a></li>
+								</ul>
+							</div>
+							<!-- //외부링크 -->
+
+							<div class="banner">
+								<a href="#">
+									<picture>
+										<source media="(max-width:768px)" srcset="../../resources/images/img_subscription_allmenu_mo.png">
+										<img src="../../resources/images/img_subscription_allmenu.png" alt="뉴스레터 구독하기">
+									</picture>
+								</a>
+							</div>
+
+							<!-- sns -->
+							<div class="sns_list">
+								<ul>
+									<li><a href="https://www.instagram.com/elle_voice/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
+									<li><a href="https://twitter.com/elle_korea" class="btn_sns twitter" target="_blank" title="새창열림"><span class="blind">트위터 X</span></a></li>
+								</ul>
+							</div>
+							<!-- //sns -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //전체메뉴 -->
+
+		<!-- container -->
+
+
+		<div id="container" class="container essay">
+            <div id="content" class="content sub">
+
+				<!-- 게시판 상세 -->
+                <div class="view_detail_wrap">
+                    <div class="cont_inner">
+                        <!-- 타이틀 영역 -->
+                        <div class="view_detail_header">
+                            <h3 class="tit">내 몸을 사랑하지 않으면서 걸그룹을 사랑할 수 있을까? <br>그 복잡한 마음에 대해</h3>
+                            <div class="write_info">
+                                <div class="profile_area">
+                                    <div class="user_info">
+                                        <span class="date">2023.07.06</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- //타이틀 영역 -->
+
+						<!-- 콘텐츠 영역 -->
+						<div class="view_detail_body">
+							<div class="view_detail_body_cont atc_body">
+								<div class="ab_photo">
+									<div class="image">
+										<img src="../../resources/images/temp/temp_cmnt02.png" alt="이미지 캡션 영역">
+										<span class="mask"></span>
+									</div>
+									<p class="caption">ⓒTakahiro Taguchi</p>
+								</div>
+								<strong>시작은 사랑</strong>
+								<p>&nbsp;</p>
+								<p>
+									천진난만하고 사랑스러운 일상 속의 고양이들이 가득한 공간과 성공이라는 화려한 삶 이면에 사업 실패와 가족의 죽음, 정신장애로 극빈자 병동에 입원하게 되는 웨인의 슬픈 삶을 보여준다. 이 시기의 작품들은 점점 그로테스크하게 변화면서 대칭 구도로 그려진다. 당시 사람들은 정신이상으로 생긴 결과라고 생각했지만 마지막까지 손에서 붓을 놓지 않았다는 웨인에게 고양이 그림은 마음과 정신을 치유해 주는 희망이었다. 후기 작품들은 우리에게 사랑과 위로를 전해주고 있다.<br/>
+									이번 전시에는 미디어아트를 추가하여 더 입체적인 볼거리를 제공한다. 친구와 가족 사이의 대화는 공감력과 상상력을 키울 수 있는 영양분이 될 것이며, 작가 루이스 웨인 작품의 핵심 요소이다.
+								</p>
+								<div class="ab_photo">
+									<div class="image">
+										<img src="../../resources/images/temp/temp_cmnt02.png" alt="이미지 캡션 영역">
+										<span class="mask"></span>
+									</div>
+									<p class="caption">ⓒTakahiro Taguchi</p>
+								</div>
+								<p>
+									<strong>누군가에게 궁금증을 갖고, 깊이 있게 알아가고 싶은 마음을 품는 건 짙은 애정을 수반하는 일이다. 당신을 사랑하기에 가능한 일. 무수한 노래 가사가 사랑에 관한 의문으로 시작해 끝이 나는 것처럼 말이다.</strong>페기 리가 불러 유명한 재즈 스탠더드 ‘I’m confessin’은 사랑하는 이를 향한 달콤한 물음으로 가득한 곡이다.<br/>
+									“내게 알려주세요. 당신도 나를 사랑하나요?” 상대의 마음을 알고 싶어 질문을 던지고, 들끓는 애정과 상대의 무심한 반응 사이에서 갈팡질팡하며 “당신이 나를 사랑하고 있다고 넘겨짚고 있는 건 아닐까요?”라며 의기소침해한다. 그런가 하면 엘라 피츠제럴드의 ‘All of me’는 헤어진 연인에게 “당신이 가져간 건 우리 기억의 일부예요. 대체 왜 모든 걸 가져가지 않았어요?”라고 반문하며 “당신 없이 어떻게 살아가야 하죠?”라는, 듣는 이 없는 쓸쓸한 물음을 이어간다. 사랑 없이는 이런 애달프고 다정한 질문도 나오지 않겠지.<br/>
+									나는 주로 질문을 던지는 축이지만, 때로는 받기도 한다. 이틀 전에는 독자가 인스타그램 DM으로 이런 질문을 했다. “작가님의 마음을 동하게 하는 단어는 무엇인가요?” 친구들이 내게 돌발 질문을 받으면 이렇게 당혹스러웠을까. 평양냉면(요즘 한창 빠져 있는 음식), 이토 준지(이름만 들어도 가슴 뛰는 만화가), 두둑한 지갑(이건 뭐…) 등 이런저런 단어가 떠올랐지만, 그럴싸하고 근사한 답을 해야겠다 싶어 내 오랜 화두인 ‘지속 가능성’이라고 답했다. 그는 되물었다. “우리 삶에서 지속 가능한 건 뭐가 있을까요?” 글쎄, 무엇이 있을까. 골몰하다 그날은 답을 내리지 못했다. <br/>
+									답이 명징하게 떠오른 건 그와 주고받은 DM을 다시 살펴보면서다. “잘 지내고 계시죠? 소설 잘 읽었어요.” 첫 소설집을 출간하기 전부터 그가 꾸준히 보내준 따뜻한 안부. “앞으로도 더 사랑받으시길 바라요.” 든든한 격려. 그가 먼저 손을 내밀고, 순도 높은 마음을 전해주었던 순간이 메시지 창에 고스란히 쌓여 있었다.<br/>
+									<strong>우리 삶을 지속시켜 주는 건 결국 사랑 아닐까.</strong> 타인을 향한 두터운 애정, 내밀한 관심과 그에게서 비롯되는 수많은 물음과 답들. 심상하다 여길 수 있지만 ‘밥 먹었어?’ ‘아픈 데는 없어?’ 같은 질문의 기저에도 상대를 향한 염려와 애틋함이 서려 있으니. 누군가에게 애정 섞인 질문을 이어가고 답을 듣다 보면 그 사람이 전보다 선명해지고, 돌올해진다. 마치 소설을 쓰기 전까지 형체가 없던 인물이 질문을 지속할수록 서서히 제 모습과 바탕을 갖추는 것처럼. 질문이라는 한자어가 바탕 질(質) 자로 이뤄진 것도 그 때문인 것 같다.<br/>
+									내게 기꺼이 사랑을 전해준 독자에게 나도 같은 질문을 했다. “당신의 삶에서 지속 가능한 건 무엇인가요?” 설렘을 안고 그 답을 기다리며 내 삶 속에 가득 차 있는 이들에게 앞으로 줄 사랑을 조금씩 가늠해 본다.
+								</p>
+
+								<div class="dtline_wrap">
+									<div class="dtline_box writer">
+										<h3 class="title">Writer</h3>
+										<div class="wirter_info">
+											<div class="profile_img">
+												<img src="../../resources/images/temp/temp_writer01.png" alt="작가 이미지">
+											</div>
+											<div class="wirter_txt">
+												<p class="name">황선우</p><!-- 2024-04-11 작가 삭제 -->
+												<p class="txt"><여자 둘이 살고 있습니다> 저자이자 운동애호가. 오랜 시간 잡지 에디터로 일한 경험을 바탕으로 여성의 일과 몸을 둘러싼 다양한 이야기를 전한다.</p><!-- 2024-04-11 괄호 수정 -->
+											</div>
+										</div>
+									</div>
+									<div class="dtline_box">
+										<h3 class="title">Category</h3>
+										<div class="cate_wrap">
+											<div class="cate_inner">
+												<span class="cate_item">
+													<input type="checkbox" id="cate_relationship" name="category" checked>
+													<label for="cate_relationship" class="essay_cate relationship"><span class="txt">RELATIONSHIP</span></label>
+												</span>
+												<span class="cate_item">
+													<input type="checkbox" id="cate_career" name="category">
+													<label for="cate_career" class="essay_cate career"><span class="txt">CAREER</span></label>
+												</span>
+												<span class="cate_item">
+													<input type="checkbox" id="cate_culture" name="category">
+													<label for="cate_culture" class="essay_cate culture"><span class="txt">CULTURE</span></label>
+												</span>
+												<!--카테고리-->
+												<!-- <span class="cate_item">
+													<input type="checkbox" id="cate_love" name="category">
+													<label for="cate_love" class="essay_cate love"><span class="txt">LOVE</span></label>
+												</span>
+												<span class="cate_item">
+													<input type="checkbox" id="cate_body" name="category">
+													<label for="cate_body" class="essay_cate body"><span class="txt">BODY</span></label>
+												</span>
+												<span class="cate_item">
+													<input type="checkbox" id="cate_society" name="category">
+													<label for="cate_society" class="essay_cate society"><span class="txt">SOCIETY</span></label>
+												</span>
+												<span class="cate_item">
+													<input type="checkbox" id="cate_advice" name="category">
+													<label for="cate_advice" class="essay_cate advice"><span class="txt">ADVICE</span></label>
+												</span>
+												<span class="cate_item">
+													<input type="checkbox" id="cate_travel" name="category">
+													<label for="cate_travel" class="essay_cate travel"><span class="txt">TRAVEL</span></label>
+												</span>
+												<span class="cate_item">
+													<input type="checkbox" id="cate_money" name="category">
+													<label for="cate_money" class="essay_cate money"><span class="txt">MONEY</span></label>
+												</span>
+												<span class="cate_item">
+													<input type="checkbox" id="cate_green" name="category">
+													<label for="cate_green" class="essay_cate green"><span class="txt">GREEN</span></label>
+												</span> -->
+											</div>
+										</div>
+									</div>
+									<div class="dtline_box credit">
+										<h3 class="title">Credit</h3>
+										<ul class="list_credit">
+											<li><em>에디터</em><span>이마루</span></li>
+											<li><em>디자이너</em><span>장정원</span></li>
+										</ul>
+									</div>
+								</div>
+								
+							</div>
+
+
+						</div>
+						<!-- //콘텐츠 영역 -->
+						
+						<!--하단 이전글/다음글 영역-->
+						<div class="view_detail_footer">
+							<!-- D: 이전글이 없는 경우 해당영역 미노출 -->
+							<div class="board_item">
+								<div class="prev_board">이전글</div>
+								<a href="#" class="board_title">나의 사랑스러운 털뭉치</a>
+							</div>
+							<!-- //D: 이전글이 없는 경우 해당영역 미노출 -->
+							<!-- D: 다음글이 없는 경우 해당영역 미노출 -->
+							<div class="board_item">
+								<div class="next_board">다음글</div>
+								<a href="#" class="board_title">40대, 오로지 빛을 따라서 한 여행</a>
+							</div>
+							<!-- //D: 다음글이 없는 경우 해당영역 미노출 -->
+						</div>
+						<!--//하단 이전글/다음글 영역-->
+
+						<div class="btn_wrap">
+							<button type="button" class="btn bctype6"><span>목록</span></button>
+						</div>
+
+                    </div>
+                </div>
+				<!-- //게시판 상세 -->
+
+				<!--구독신청 고정 배너영역-->
+				<div class="banner_wrap">
+					<div class="cont_inner">
+						<div class="one_ban_swiper">
+							<div class="swiper-wrapper">
+								<a href="#none" class="swiper-slide ban01" title="엘르보이스 뉴스레터 구독 신청">
+									<img class="pc_img" src="../../resources/images/img-obs01.png" alt="엘르보이스 뉴스레터 구독 신청하시고 다양한 여성들의 삶의 이야기를 만나보세요!">
+									<img class="mo_img" src="../../resources/images/img-obs01-mo.png" alt="엘르보이스 뉴스레터 구독 신청하시고 다양한 여성들의 삶의 이야기를 만나보세요!">
+								</a>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+				<!--//구독신청 고정 배너영역-->
+
+            </div>
+        </div>
+		<!-- //container -->
+
+		<!-- footer -->
+		<footer id="footer" class="footer">
+			<div class="footer_top">
+				<div class="cont_inner">
+					<div class="footer_link">
+						<ul>
+							<li><a href="#" target="_blank">매체소개</a></li>
+							<li><a href="#" target="_blank">고객센터</a></li>
+							<li><a href="#" target="_blank">포인트정책</a></li>
+							<li class="impt"><a href="#" target="_blank">개인정보처리방침</a></li>
+							<li><a href="#" target="_blank">이용약관</a></li>
+							<li><a href="#" target="_blank">이메일무단수집금지</a></li>
+							<li><a href="#" target="_blank">광고&middot;제휴문의</a></li>
+							<li><a href="#" target="_blank">윤리경영</a></li>
+						</ul>
+					</div>
+					<div class="footer_sns">
+						<ul>
+							<li><a href="https://www.facebook.com/ellemagazine.kr/" target="_blank" title="페이스북 바로가기"><img src="../../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
+							<li><a href="https://www.instagram.com/ellekorea/" target="_blank" title="인스타그램 바로가기"><img src="../../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
+							<li><a href="https://www.youtube.com/user/ellemagazinekr" target="_blank" title="유튜브 바로가기"><img src="../../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
+							<li><a href="https://story.kakao.com/ch/ellekorea" target="_blank" title="카카오스토리 바로가기"><img src="../../resources/images/ico_kakao.svg" alt="카카오스토리"></a></li>
+							<li><a href="https://twitter.com/elle_korea" target="_blank" title="트위터X 바로가기"><img src="../../resources/images/ico_twitter.svg" alt="트위터X"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer_bottom">
+				<div class="cont_inner">
+					<div class="footer_logo">
+						<img src="../../resources/images/logo_elle.svg" alt="ELLE">
+					</div>
+					<div class="footer_info">
+						<address class="addr_wrap">
+							<em>허스트중앙(유)</em>
+							<div class="addr_txt">
+								<span class="addr">서울시 강남구 도산대로 156(논현동)</span>
+								<span class="ceo">대표자 : 강주연</span>
+								<br class="pc_br">
+								<span class="num">사업자등록번호 : 104-81-55280</span>
+								<br class="mo_br">
+								<span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
+								<span class="email">이메일 : <a href="mailto:elle@hll.kr">elle@hll.kr</a></span>
+							</div>
+						</address>
+						<p class="copyright">© 2024 Hearst Joongang. All Rights Reserved.</p>
+					</div>
+				</div>
+			</div>
+			<div class="family_wrap">
+				<button type="button" class="btn_familysite"><span>Family &amp; Global</span></button>
+				<div class="familysite">
+					<div class="cont_inner">
+						<div class="tab_wrap">
+							<div class="tab_menu type02">
+								<ul>
+									<li class="on"><a href="javascript:;">FAMILY</a></li><!-- D: 선택 시 on 클래스 추가 -->
+									<li><a href="javascript:;">GLOBAL</span></a></li>
+								</ul>
+							</div>
+
+							<div class="tab_cont_wrap">
+								<!-- Family 탭 내용 -->
+								<div class="tab_cont active">
+									<!-- 리스트 -->
+									<div class="familysite_list family">
+										<ul>
+											<li><a href="#" target="_blank" title="새창열림">ELLE</a></li>
+											<li><a href="#" target="_blank" title="새창열림">COSMOPOLITAN</a></li>
+											<li><a href="#" target="_blank" title="새창열림">Harper’s  BAZAAR</a></li>
+											<li><a href="#" target="_blank" title="새창열림">ESQUIRE</a></li>
+											<li><a href="#" target="_blank" title="새창열림">ELLEVOICE</a></li>
+											<li><a href="#" target="_blank" title="새창열림">예술산책</a></li>
+											<li><a href="#" target="_blank" title="새창열림">eee</a></li>
+										</ul>
+									</div>
+									<!-- //리스트 -->
+								</div>
+								<!-- //Family 탭 내용 -->
+
+								<!-- Global 탭 내용 -->
+								<div class="tab_cont">
+									<!-- 리스트 -->
+									<div class="familysite_list global">
+										<ul>
+											<li><a href="#" target="_blank" title="새창열림">BELGIUM</a></li>
+											<li><a href="#" target="_blank" title="새창열림">HONG-KONG</a></li>
+											<li><a href="#" target="_blank" title="새창열림">SLOVENIA</a></li>
+											<li><a href="#" target="_blank" title="새창열림">BRAZIL</a></li>
+											<li><a href="#" target="_blank" title="새창열림">HUNGARY</a></li>
+											<li><a href="#" target="_blank" title="새창열림">SOUTH AFRICA</a></li>
+											<li><a href="#" target="_blank" title="새창열림">CANADA</a></li>
+											<li><a href="#" target="_blank" title="새창열림">INDIA</a></li>
+											<li><a href="#" target="_blank" title="새창열림">SPAIN</a></li>
+											<li><a href="#" target="_blank" title="새창열림">CHINA</a></li>
+											<li><a href="#" target="_blank" title="새창열림">ITALY</a></li>
+											<li><a href="#" target="_blank" title="새창열림">SWEDEN</a></li>
+											<li><a href="#" target="_blank" title="새창열림">CZECH REPUBLIC </a></li>
+											<li><a href="#" target="_blank" title="새창열림">JAPAN</a></li>
+											<li><a href="#" target="_blank" title="새창열림">TAIWAN</a></li>
+											<li><a href="#" target="_blank" title="새창열림">DENMARK</a></li>
+											<li><a href="#" target="_blank" title="새창열림">NETHERLANDS</a></li>
+											<li><a href="#" target="_blank" title="새창열림">THAILAND</a></li>
+											<li><a href="#" target="_blank" title="새창열림">FINLAND</a></li>
+											<li><a href="#" target="_blank" title="새창열림">NORWAY</a></li>
+											<li><a href="#" target="_blank" title="새창열림">TURKEY</a></li>
+											<li><a href="#" target="_blank" title="새창열림">FRANCE</a></li>
+											<li><a href="#" target="_blank" title="새창열림">QUEBEC</a></li>
+											<li><a href="#" target="_blank" title="새창열림">UNITED KINGDOM</a></li>
+											<li><a href="#" target="_blank" title="새창열림">GERMANY</a></li>
+											<li><a href="#" target="_blank" title="새창열림">RUSSIA</a></li>
+											<li><a href="#" target="_blank" title="새창열림">USA</a></li>
+										</ul>
+									</div>
+									<!-- //리스트 -->
+								</div>
+								<!-- //Global 탭 내용 -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<button type="button" class="btn_top"><span class="blind">상단으로 이동</span></button>
+		</footer>
+		<!-- //footer -->
+	</div>
+
+	<!-- 팝업 : 복사하기 알럿 -->
+	<div class="popup_alert" data-alert="alert_1">
+		<div class="popup_alert_inner">
+			<div class="popup_alert_cont">
+				<p class="alert_txt">클립보드에 복사되었습니다.</p>
+			</div>
+			<div class="popup_alert_bottom">
+				<div class="btn_wrap">
+					<button type="button" class="btn bctype1" data-alert-close="alert_1"><span>확인</span></button>
+				</div>
+			</div>
+			<div class="popup_close">
+				<button type="button" class="btn_close" data-alert-close="alert_1"><span class="blind">닫기</span></button>
+			</div>
+		</div>
+	</div>
+	<!-- //팝업 : 복사하기 알럿 -->
+
+	<!-- js -->
+	<script src="../../resources/js/ui.common.js"></script>
+	<!-- //js -->
+
+<script>
+	currentPage = "view";
+	$(() => {
+		progress_bar();
+	});
+
+	// 페이지의 모든 리소스가 로드된 후 실행할 코드
+	$(window).on('load', function () {
+		// 스크랩
+		$(".js-btn-scrap").btnScrap();
+	});
+
+</script>
+</body>
+</html>

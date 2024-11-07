@@ -1,0 +1,8 @@
+body.is_pc .container.etc { padding:72px 0 180px}
+body.is_pc .container.etc #content { padding-top:60px}
+.privacy_wrap{}                 
+
+
+@media (max-width:768px){
+    
+}

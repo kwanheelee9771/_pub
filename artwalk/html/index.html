@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>예술산책ㅣ예술을 산책하듯 가볍게 즐기는 아트 정보 큐레이션 서비스</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.harpersbazaar.co.kr/artwalk">
+    <meta property="og:title" content="예술산책ㅣ예술을 산책하듯 가볍게 즐기는 아트 정보 큐레이션 서비스">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="국내외 아트신에서 펼쳐지는 주요 전시와 이슈를 가장 빠르게 확인해보세요." />
+    <meta name="keywords" content="바자,하퍼스바자,아트 서비스, 문화,예술,아트,전시,추천전시,전시정보,바자아트">
+    <meta name="format-detection" content="telephone=no">
+    <!-- css, Jquery -->
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/main.css" />
+    <script src="../resources/js/jquery-3.6.0.min.js"></script>
+    <!-- //css, Jquery -->
+</head>
+
+<body>
+    <div id="bazaar">
+        <div id="wrap" class="wrap">
+			<!-- header -->
+			<header id="header" class="header">
+				<!-- header_wrap -->
+				<div class="header_wrap">
+					<div class="header_top">
+						<div class="cont_inner">
+							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo.svg" alt="예술산책"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
+							<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
+						</div>
+					</div>
+					<div class="header_bottom">
+						<div class="cont_inner">
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+							<strong class="logo"><a href="./index.html"><img src="../resources/images/logo.svg" alt="예술산책"></a></strong><!-- D: 로고 (PC 서브에서 노출) -->
+							<div class="header_navi">
+								<ul>
+									<li><a href="#">전시정보</a></li>
+									<li><a href="#">1분산책</a></li>
+									<li><a href="#">바자아트</a></li>
+									<li><a href="#">커뮤니티</a></li>
+									<li class="has_sub_menu"><a href="#">예술백과</a><!-- D: 하위메뉴가 있을 경우 has_sub_menu클래스추가 -->
+                                        <div class="sub_menu">
+                                            <ul class="sub_menu_list">
+                                                <li class="ssm_item"><a href="#">갤러리 정보</a></li>
+                                                <li class="ssm_item"><a href="#">작가 정보</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+									<li><a href="#">마이페이지</a></li>
+								</ul>
+							</div>
+							<div class="header_util">
+								<div class="aside">
+									<a href="#">LOGIN</a><!-- D: LOGOUT -->
+									<a href="#">SIGNUP</a>
+								</div>
+								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
+							</div>
+						</div>
+					</div>
+
+					<!-- D: 플로팅바 영역 -->
+					<div class="floating_bar">
+						<div class="cont_inner">
+							<div class="detail_info">
+								<!-- 브레드크럼 -->
+								<div class="breadcrumb">
+									<a href="#" class="home">HOME</a>
+									<a href="#" class="cate_dep">전시 정보</a>
+								</div>
+								<!-- //브레드크럼 -->
+								<!-- 기사 타이틀 -->
+								<div class="txtbox">
+									<p class="tit">이재석 《극단적으로 복잡하나 매우 우아하게 설계된》</p>
+								</div>
+								<!-- //기사 타이틀 -->
+								<!-- 스크랩, 공유하기 -->
+								<div class="sharebox">
+									<button type="button" class="btn_ico scrap js-btn-scrap"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
+									<button type="button" class="btn_ico share" data-layer-open="popup_share"><span class="blind">공유하기</span></button>
+								</div>
+								<!-- //스크랩, 공유하기 -->
+							</div>
+						</div>
+					</div>
+					<!-- //D: 플로팅바 영역 -->
+				</div>
+				<!-- //header_wrap -->
+
+				<!-- 검색 레이어 -->
+				<div class="search_layer"><!-- D: 오픈 시 open 클래스 추가 -->
+					<div class="cont_inner">
+						<div class="search_box">
+							<div class="inputbox search">
+								<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off">
+								<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 검색어 입력 시 노출 -->
+								<button type="button" class="btn_ico search"><span class="blind">검색</span></button>
+							</div>
+
+							<!-- 추천 키워드 -->
+							<!-- D: 추천 키워드가 없는 경우 해당 영역 전체 미노출 -->
+							<div class="search_keyword">
+								<h3 class="search_tit">추천 키워드</h3>
+								<!-- 키워드 리스트 -->
+								<!-- D: 최대 10개까지 노출 -->
+								<ul class="word_list">
+									<li><a href="#">#어윈올라프</a></li>
+									<li><a href="#">#불가리</a></li>
+									<li><a href="#">#블랙핑크하퍼스바자커버</a></li>
+									<li><a href="#">#갤러리</a></li>
+									<li><a href="#">#5월전시</a></li>
+									<li><a href="#">#패션아이템</a></li>
+									<li><a href="#">#백남준</a></li>
+									<li><a href="#">#반팔재킷</a></li>
+									<li><a href="#">#구찌 패션쇼</a></li>
+									<li><a href="#">#STAR일링</a></li>
+								</ul>
+								<!-- //키워드 리스트 -->
+							</div>
+							<!-- //추천 키워드 -->
+						</div>
+					</div>
+				</div>
+				<!-- //검색 레이어 -->
+
+				<!-- D: [팝업] 공유하기 -->
+				<div class="popup_layer pop_share" data-layer="popup_share">
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_tit">
+								<h3 class="tit">공유하기</h3>
+							</div>
+							<div class="popup_close">
+								<button type="button" class="btn_close" data-layer-close="popup_share"><span class="blind">닫기</span></button>
+							</div>
+						</div>
+						<div class="popup_cont">
+							<div class="sns_list">
+								<ul>
+									<li><button type="button" class="btn_sns talk"><span class="tit">카카오톡</span></button></li>
+									<li><button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button></li>
+									<li><button type="button" class="btn_sns twitter"><span class="tit">X</span></button></li>
+									<li><button type="button" class="btn_sns copy" data-alert-open="alert_1"><span class="tit">복사</span></button></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //D: [팝업] 공유하기 -->
+			</header>
+			<!-- //header -->
+
+			<!-- 전체메뉴 -->
+			<div class="allmenu_wrap"><!-- D: 오픈 시 open 클래스 추가 -->
+				<div class="allmenu_dimmed"></div>
+				<div class="allmenu_area">
+					<div class="allmenu_cont">
+						<!-- 상단 닫기 영역 -->
+						<div class="top_area">
+							<button type="button" class="btn_menu_close"><span class="blind">닫기</span></button>
+						</div>
+						<!-- //상단 닫기 영역 -->
+
+						<div class="scroll_custom">
+							<div class="allmenu_inner">
+								<!-- 로그인/회원가입 -->
+								<div class="allmenu_util">
+									<a href="#">LOGIN</a><!-- D: LOGOUT -->
+									<a href="#">SIGNUP</a>
+								</div>
+								<!-- //로그인/회원가입 -->
+
+								<!-- 메뉴 -->
+								<!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
+								<div class="allmenu_list">
+									<ul class="depth1">
+										<li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
+											<a href="#">전시정보</a>
+										</li>
+										<li>
+											<a href="#">1분산책</a>
+										</li>
+										<li>
+											<a href="#">바자아트</a>
+										</li>
+										<li>
+											<a href="#">커뮤니티</a>
+										</li>
+										<li class="has_menu">
+											<a href="#">예술백과<span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">갤러리 정보</a></li>
+												<li><a href="#">작가 정보</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">마이페이지</a>
+										</li>
+										<li>
+											<a href="#">산책메이트 혜택 안내</a>
+										</li>
+									</ul>
+								</div>
+								<!-- //메뉴 -->
+
+                                <div class="allmenu_list">
+                                    <ul class="depth1">
+										<li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
+											<a href="#" class="arrow">하퍼스바자</a>
+										</li>
+                                    </ul>
+                                </div>
+								<!-- sns -->
+								<div class="sns_list">
+									<ul class="jc-fs">
+										<li><a href="https://www.instagram.com/artwalk.kr/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
+										<li><a href="https://pf.kakao.com/_xaxmEXb" class="btn_sns kakao" target="_blank" title="새창열림"><span class="blind">카카오채널</span></a></li>
+									</ul>
+								</div>
+								<!-- //sns -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //전체메뉴 -->
+
+            <!-- container -->
+            <div id="container" class="container main_container">
+                <div id="content" class="content">
+                    <!-- 메인비주얼 -->
+                    <div class="art_main_visual"><!-- D: PC에서는 3개노출 모바일에서는 자동크기 -->
+                        <div class="mv_slide">
+                            <a href="#" class="mv_slide_item active" title="제이디 차 상세페이지로 이동"> 
+                                <div class="art_v_img_col">
+                                    <div class="art_v_img">
+                                        <div class="art_v_img2">
+                                            <img src="../resources/images/main/art_main_visual01.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="art_v_guide">
+                                    <div class="art_v_guide_sub">
+                                        <p class="art_v_tit">극단적으로 복잡하나<br>매우 우아하게 설계된</p>
+                                        <p class="art_v_desc">아시아 최초 프라하 오리지널 아시아 최초<br>몰입형 멀티미디어 전시</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="mv_slide_item" title="제이디 차 상세페이지로 이동"> 
+                                <div class="art_v_img_col">
+                                    <div class="art_v_img">
+                                        <div class="art_v_img2">
+                                            <img src="../resources/images/main/art_main_visual02.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="art_v_guide">
+                                    <div class="art_v_guide_sub">
+                                        <p class="art_v_tit">극단적으로 복잡하나<br>매우 우아하게 설계된</p>
+                                        <p class="art_v_desc">아시아 최초 프라하 오리지널 아시아 최초<br>몰입형 멀티미디어 전시</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="mv_slide_item" title="제이디 차 상세페이지로 이동"> 
+                                <div class="art_v_img_col">
+                                    <div class="art_v_img">
+                                        <div class="art_v_img2">
+                                            <img src="../resources/images/main/art_main_visual03.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="art_v_guide">
+                                    <div class="art_v_guide_sub">
+                                        <p class="art_v_tit">극단적으로 복잡하나<br>매우 우아하게 설계된</p>
+                                        <p class="art_v_desc">아시아 최초 프라하 오리지널 아시아 최초<br>몰입형 멀티미디어 전시</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="mv_slide_item" title="제이디 차 상세페이지로 이동"> 
+                                <div class="art_v_img_col">
+                                    <div class="art_v_img">
+                                        <div class="art_v_img2">
+                                            <img src="../resources/images/main/art_main_visual04.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="art_v_guide">
+                                    <div class="art_v_guide_sub">
+                                        <p class="art_v_tit">극단적으로 복잡하나<br>매우 우아하게 설계된</p>
+                                        <p class="art_v_desc">아시아 최초 프라하 오리지널 아시아 최초<br>몰입형 멀티미디어 전시</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="mv_slide_item" title="제이디 차 상세페이지로 이동"> 
+                                <div class="art_v_img_col">
+                                    <div class="art_v_img">
+                                        <div class="art_v_img2">
+                                            <img src="../resources/images/main/art_main_visual05.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="art_v_guide">
+                                    <div class="art_v_guide_sub">
+                                        <p class="art_v_tit">극단적으로 복잡하나<br>매우 우아하게 설계된</p>
+                                        <p class="art_v_desc">아시아 최초 프라하 오리지널 아시아 최초<br>몰입형 멀티미디어 전시</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- <a href="#" class="mv_slide_item" title="제이디 차 상세페이지로 이동"> 
+                                <div class="art_v_img_col">
+                                    <div class="art_v_img">
+                                        <div class="art_v_img2">
+                                            <img src="../resources/images/main/art_main_visual06.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="art_v_guide">
+                                    <div class="art_v_guide_sub">
+                                        <p class="art_v_tit">극단적으로 복잡하나<br>매우 우아하게 설계된</p>
+                                        <p class="art_v_desc">아시아 최초 프라하 오리지널 아시아 최초<br>몰입형 멀티미디어 전시</p>
+                                    </div>
+                                </div>
+                            </a> -->
+
+                            <div class="btn_move btn_next"><img src="../resources/images/main/main_visual_next.png" alt="다음"></div>
+                            <div class="btn_move btn_prev"><img src="../resources/images/main/main_visual_prev.png" alt="이전"></div>
+
+                            <div class="mv_page_wrap"></div>
+    
+                            <div class="rotate_txt"><img src="../resources/images/main/img_main_visual_rotate.png" alt="exhibition of the month"></div>
+                        </div>
+                    </div>
+                    <!-- //메인비주얼 --> 
+
+                    <!-- 전시정보 -->
+                    <div class="main_section ex_info">
+                        <div class="cont_inner">
+                            <div class="tit_wrap">
+                                <div class="tit_area">
+                                    <h2 class="tit">전시정보</h2>
+                                    <div class="side"><a href="#" class="btn_more" title="전시정보 리스트 페이지로 이동"><span>더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
+                                </div>
+                                <p class="txt">당신이 궁금한 전시 소식을 한눈에 확인하세요. <br class="mo_br">지금, 여기서, 그게 무엇이든!</p>
+                            </div>
+
+                            <div class="swiper_pc_3_mo_auto"><!-- D: PC에서는 3개노출 모바일에서는 자동크기 -->
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="comm_ex_item">
+                                                <a href="#" title="제이디 차 상세페이지로 이동"> 
+                                                    <figure class="ex_img_fig">
+                                                        <figcaption>제이디 차 포스터</figcaption>
+                                                        <img class="ex_img" src="../resources/images/temp/temp_ex_img01.jpg" alt="전시정보 관련 포스터">
+                                                    </figure>
+                                                    
+                                                    <div class="ex_guide">
+                                                        <span class="ex_sbj">제이디 차 - 구미호 혹은 우리를 호리는 것들 이야기</span>
+                                                        <div class="ex_range">
+                                                            <span class="ex_date">2023.07.13 - 2023.10.12</span>
+                                                        </div>
+                                                        <div class="ex_loc_row">
+                                                            <span class="ex_loc ex_loc_sub">서울/강서구</span>
+                                                            <span class="ex_place ex_loc_sub">스페이스K서울스페이스K서울스페이스K서울</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="ex_top">
+                                                    <div class="ex_top_flag">
+                                                        <span class="flag">추천</span>
+                                                        <span class="flag type2">이벤트</span>
+                                                    </div>
+                                                
+                                                    <button class="btn_ico scrap sz_28 js-btn-scrap on" title="스크랩 누르기">
+                                                        <span class="blind">스크랩</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="comm_ex_item">
+                                                <a href="#" title="맥스 달튼, 영화의 순간들 상세페이지로 이동"> 
+                                                    <figure class="ex_img_fig">
+                                                        <figcaption>맥스 달튼, 영화의 순간들 포스터</figcaption>
+                                                        <img class="ex_img" src="../resources/images/temp/temp_ex_img02.jpg" alt="전시정보 관련 포스터">
+                                                    </figure>
+                                                    
+                                                    <div class="ex_guide">
+                                                        <span class="ex_sbj">맥스 달튼, 영화의 순간들</span>
+                                                        <div class="ex_range">
+                                                            <span class="ex_date">2023.06.29 - 2023.09.04</span>
+                                                            <span class="flag sm">오픈예정</span>
+                                                        </div>
+                                                        <div class="ex_loc_row">
+                                                            <span class="ex_loc ex_loc_sub">서울/강서구</span>
+                                                            <span class="ex_place ex_loc_sub">스페이스K서울</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="ex_top">
+                                                    <div class="ex_top_flag">
+                                                        <span class="flag">추천</span>
+                                                        <span class="flag type2">이벤트</span>
+                                                    </div>
+                                                
+                                                    <button class="btn_ico scrap sz_28 js-btn-scrap on" title="스크랩 누르기">
+                                                        <span class="blind">스크랩</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="comm_ex_item">
+                                                <a href="#" title="도널드 저드 상세페이지로 이동"> 
+                                                    <figure class="ex_img_fig">
+                                                        <figcaption>도널드 저드 포스터</figcaption>
+                                                        <img class="ex_img" src="../resources/images/temp/temp_ex_img03.jpg" alt="전시정보 관련 포스터">
+                                                    </figure>
+                                                    
+                                                    <div class="ex_guide">
+                                                        <span class="ex_sbj">도널드 저드</span>
+                                                        <div class="ex_range">
+                                                            <span class="ex_date">2023.06.29 - 2023.09.04</span>
+                                                            <span class="flag sm">종료</span>
+                                                        </div>
+                                                        <div class="ex_loc_row">
+                                                            <span class="ex_loc ex_loc_sub">서울/강서구</span>
+                                                            <span class="ex_place ex_loc_sub">타데우스로팍</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="ex_top">
+                                                    <div class="ex_top_flag">
+                                                        <span class="flag">추천</span>
+                                                    </div>
+                                                
+                                                    <button class="btn_ico scrap sz_28 js-btn-scrap" title="스크랩 누르기">
+                                                        <span class="blind">스크랩</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="comm_ex_item">
+                                                <a href="#" title="제이디 차 상세페이지로 이동"> 
+                                                    <figure class="ex_img_fig">
+                                                        <figcaption>제이디 차 포스터</figcaption>
+                                                        <img class="ex_img" src="../resources/images/temp/temp_ex_img01.jpg" alt="전시정보 관련 포스터">
+                                                    </figure>
+                                                    
+                                                    <div class="ex_guide">
+                                                        <span class="ex_sbj">제이디 차 - 구미호 혹은 우리를 호리는 것들 이야기</span>
+                                                        <div class="ex_range">
+                                                            <span class="ex_date">2023.07.13 - 2023.10.12</span>
+                                                        </div>
+                                                        <div class="ex_loc_row">
+                                                            <span class="ex_loc ex_loc_sub">서울/강서구</span>
+                                                            <span class="ex_place ex_loc_sub">스페이스K서울</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="ex_top">
+                                                    <div class="ex_top_flag">
+                                                        <span class="flag">추천</span>
+                                                        <span class="flag type2">이벤트</span>
+                                                    </div>
+                                                
+                                                    <button class="btn_ico scrap sz_28 js-btn-scrap on" title="스크랩 누르기">
+                                                        <span class="blind">스크랩</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="comm_ex_item">
+                                                <a href="#" title="맥스 달튼, 영화의 순간들 상세페이지로 이동"> 
+                                                    <figure class="ex_img_fig">
+                                                        <figcaption>맥스 달튼, 영화의 순간들 포스터</figcaption>
+                                                        <img class="ex_img" src="../resources/images/temp/temp_ex_img02.jpg" alt="전시정보 관련 포스터">
+                                                    </figure>
+                                                    
+                                                    <div class="ex_guide">
+                                                        <span class="ex_sbj">맥스 달튼, 영화의 순간들</span>
+                                                        <div class="ex_range">
+                                                            <span class="ex_date">2023.06.29 - 2023.09.04</span>
+                                                            <span class="flag sm">오픈예정</span>
+                                                        </div>
+                                                        <div class="ex_loc_row">
+                                                            <span class="ex_loc ex_loc_sub">서울/강서구</span>
+                                                            <span class="ex_place ex_loc_sub">스페이스K서울</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="ex_top">
+                                                    <div class="ex_top_flag">
+                                                        <span class="flag">추천</span>
+                                                        <span class="flag type2">이벤트</span>
+                                                    </div>
+                                                
+                                                    <button class="btn_ico scrap sz_28 js-btn-scrap on" title="스크랩 누르기">
+                                                        <span class="blind">스크랩</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="comm_ex_item">
+                                                <a href="#" title="도널드 저드 상세페이지로 이동"> 
+                                                    <figure class="ex_img_fig">
+                                                        <figcaption>도널드 저드 포스터</figcaption>
+                                                        <img class="ex_img" src="../resources/images/temp/temp_ex_img03.jpg" alt="전시정보 관련 포스터">
+                                                    </figure>
+                                                    
+                                                    <div class="ex_guide">
+                                                        <span class="ex_sbj">도널드 저드</span>
+                                                        <div class="ex_range">
+                                                            <span class="ex_date">2023.06.29 - 2023.09.04</span>
+                                                            <span class="flag sm">종료</span>
+                                                        </div>
+                                                        <div class="ex_loc_row">
+                                                            <span class="ex_loc ex_loc_sub">서울/강서구</span>
+                                                            <span class="ex_place ex_loc_sub">타데우스로팍</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                
+                                                <div class="ex_top">
+                                                    <div class="ex_top_flag">
+                                                        <span class="flag">추천</span>
+                                                    </div>
+                                
+                                                    <button class="btn_ico scrap sz_28 js-btn-scrap" title="스크랩 누르기">
+                                                        <span class="blind">스크랩</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn_move button_next"><img src="../resources/images/ic_arrow_right_48.svg" alt="다음"></div>
+                                <div class="btn_move button_prev"><img src="../resources/images/ic_arrow_left_48.svg" alt="이전"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 커뮤니티 -->
+                    <div class="main_section main_cmnt">
+                        <div class="cont_inner">
+                            <div class="d_d_flex_row m_d_block">
+                                <div class="flex_col w_full">
+                                    <div class="tit_wrap color_w">
+                                        <div class="tit_area">
+                                            <h2 class="tit">커뮤니티</h2>
+                                        </div>
+                                        <p class="txt">산책 메이트를 위한 대화 공간.</p>
+                                        <div class="side"><a href="#" class="btn_more" title="커뮤니티 리스트 페이지로 이동"><span>더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
+                                    </div>
+                                </div>
+                                <div class="flex_col w_full">
+                                    <div id="cList" class="c_list">
+                                        <ul class="c_list_track"><!-- D: PC에서는 위로 흐르는 애니메이션 모바일에서는 4개 고정 -->
+                                            <li class="c_list_item">
+                                                <a href="#" class="c_list_btn">
+                                                    <div class="row_top">
+                                                        <span class="flag">공지사항</span>
+                                                        <p class="c_list_sbj">[바자전 : HOLI _ DAY, 세개의 렌즈] 에 초대합니다!</p>
+                                                    </div>
+                                                    <div class="row_bottom">
+                                                        <span class="c_list_writer">예술산책</span>
+                                                        <span class="c_list_date">23.09.08</span>
+                                                        </div>
+                                                </a>
+                                            </li>
+                                            <li class="c_list_item"> 
+                                                <a href="#" class="c_list_btn">
+                                                    <div class="row_top">
+                                                        <span class="flag type2">최신글</span>
+                                                        <p class="c_list_sbj">최근 다녀온 전시 썰 푼다!</p>
+                                                    </div>
+                                                    <div class="row_bottom">
+                                                        <span class="c_list_writer">1등산책메이트</span>
+                                                        <span class="c_list_date">23.09.08</span>
+                                                    </div>
+                                                </a>
+                                            </li> 
+                                            <li class="c_list_item">
+                                                <a href="#" class="c_list_btn">
+                                                    <div class="row_top">
+                                                        <span class="flag type2">최신글</span>
+                                                        <p class="c_list_sbj">아이와 함께 다녀온 미술관 후기 아이와 함께 다녀온 미술관</p>
+                                                    </div>
+                                                    <div class="row_bottom">
+                                                        <span class="c_list_writer">산책매니아</span>
+                                                        <span class="c_list_date">23.09.08</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="c_list_item">
+                                                <a href="#" class="c_list_btn">
+                                                    <div class="row_top">
+                                                        <span class="flag type2">최신글</span>
+                                                        <p class="c_list_sbj">최고의 전시회, 요시다 유니 개인전</p>
+                                                    </div>
+                                                    <div class="row_bottom">
+                                                        <span class="c_list_writer">산책조아</span>
+                                                        <span class="c_list_date">23.09.08</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                    <!-- //커뮤니티 -->
+
+                    <!-- 1분산책 -->
+                    <div class="main_section main_wc">
+                        <div class="cont_inner">
+                            <div class="tit_wrap">
+                                <div class="tit_area">
+                                    <h2 class="tit">1분산책</h2>
+                                    <div class="side"><a href="#" class="btn_more" title="1분산책 리스트 페이지로 이동"><span>더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
+                                </div>
+                                <p class="txt">산책하듯 가볍게 즐기는 예술 한 점.</p>
+                            </div>
+
+                            <div class="swiper active_dp_swiper">
+                                <div class="active-display">
+                                    <div class="wc_header">
+                                        <div class="present">
+                                            <div class="present_img"><img src="../resources/images/wc_logo.png"></div>
+                                            <div class="present_txt">artwalk.kr</div>
+                                        </div>
+                                        <button class="btn_more" title="내용 더보기"><img src="../resources/images/ic_dot_20.svg" alt="더보기"></button>
+                                     </div>
+                                    
+                                    <a href="">
+                                        <figure class="wc_img">
+                                            <figcaption>프리즈 위크에 열리는 청담동 전시 111</figcaption>
+                                            <img src="../resources/images/temp/temp-aw01.jpg" loading="lazy">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="wc_img"><img src="../resources/images/temp/temp-aw01.jpg"></div>
+                                            <span class="figcaption blind">프리즈 위크에 열리는 청담동 전시 111</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="wc_img"><img src="../resources/images/temp/temp-aw02.jpg"></div>
+                                            <span class="figcaption blind">프리즈 위크에 열리는 청담동 전시 222</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="wc_img"><img src="../resources/images/temp/temp-aw03.jpg"></div>
+                                            <span class="figcaption blind">프리즈 위크에 열리는 청담동 전시 333</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="wc_img"><img src="../resources/images/temp/temp-aw04.jpg"></div>
+                                            <span class="figcaption blind">프리즈 위크에 열리는 청담동 전시 444</span>
+                                        </a>
+                                    </div>
+									<div class="swiper-slide">
+										<a href="#">
+											<div class="wc_img"><img src="https://ssl.pstatic.net/melona/libs/1472/1472092/d3e1b2f7aeb9c7aacf5a_20231226165627394.jpg"></div>
+											<span class="figcaption blind">프리즈 위크에 열리는 청담동 전시 555</span>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#">
+											<div class="wc_img"><img src="https://s.pstatic.net/shopping.phinf/20231226_19/76dd2aa7-649b-4fac-bc98-e7da7383d854.jpg?type=f294_378"></div>
+											<span class="figcaption blind">프리즈 위크에 열리는 청담동 전시 청담동 전시전6 666</span>
+										</a>
+									</div>
+                                </div>
+                                <div class="btn_move button_next"><img src="../resources/images/ic_arrow_right_40.svg" alt="다음"></div>
+                                <div class="btn_move button_prev"><img src="../resources/images/ic_arrow_left_40.svg" alt="이전"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //1분산책 --> 
+
+                    <!-- 바자아트 -->
+                    <div class="main_section main_an">
+                        <div class="cont_inner">
+                            <div class="tit_wrap">
+                                <div class="tit_area">
+                                    <h2 class="tit">바자아트</h2>
+                                    <div class="side"><a href="#" class="btn_more"><span>더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
+                                </div>
+                                <p class="txt">매거진 &lt;바자 아트&gt;에서 다루는 깊이 있는 미술 기사를 만나보세요.</p>
+                            </div>
+
+							<!-- masonry layout 리스트-->
+							<div class="artnews_list">
+								<ul class="grid">
+									<li>
+                                        <a href="#">
+                                            <div class="item_img">
+                                                <img src="../resources/images/temp/temp-main-an01.jpg" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="item_info">
+                                            <p class="item_sbj">ART NEWS</p>
+                                            <p class="item_desc">새로 생긴 미술 공간들</p>
+                                        </div>
+									</li>
+									<li>
+                                        <a href="#">
+                                            <div class="item_img"><img src="../resources/images/temp/temp-main-an02.jpg" alt=""></div>
+                                        </a>
+                                        <div class="item_info">
+                                            <p class="item_sbj">EXHIBITION</p>
+                                            <p class="item_desc">요즘 아트 컬렉터들이 주목하는 작가, 원계홍은 누구인가. 요즘 아트 컬렉터들이 주목하는 작가, 원계홍은 누구인가.</p>
+                                        </div>
+									</li>
+									<li>
+                                        <a href="#">
+                                            <div class="item_img">
+                                                <img src="../resources/images/temp/temp-main-an03-pc.jpg" alt="" class="pc-img">
+                                                <img src="../resources/images/temp/temp-main-an03-mo.jpg" alt="" class="mo-img">
+                                            </div>
+                                        </a>
+                                        <div class="item_info">
+                                            <p class="item_sbj">ART NEWS</p>
+                                            <p class="item_desc">박민하가 감각한 도시의 풍경</p>
+                                        </div>
+									</li>
+									<li>
+                                        <a href="#">
+                                            <div class="item_img">
+                                                <img src="../resources/images/temp/temp-main-an04-pc.jpg" alt="" class="pc-img">
+                                                <img src="../resources/images/temp/temp-main-an04-mo.jpg" alt="" class="mo-img">
+                                            </div>
+                                        </a>
+                                        <div class="item_info">
+                                            <p class="item_sbj">INTERVIEW</p>
+                                            <p class="item_desc">#바자아트위크 흘러가는 시간을 소장할 수 있을까?</p>
+                                        </div>
+									</li>
+									<li>
+                                        <a href="#">
+                                            <div class="item_img"><img src="../resources/images/temp/temp-main-an05.jpg" alt=""></div>
+                                        </a>
+                                        <div class="item_info">
+                                            <p class="item_sbj">EXHIBITION</p>
+                                            <p class="item_desc">전 세계 9인의 여성 예술가를 조명하는, 미스 디올 전시</p>
+                                        </div>
+									</li>
+									<li>
+                                        <a href="#">
+                                            <div class="item_img"><img src="../resources/images/temp/temp-main-an06.jpg" alt=""></div>
+                                        </a>
+                                        <div class="item_info">
+                                            <p class="item_sbj">ART NEWS</p>
+                                            <p class="item_desc">에르빈 부름의 움직이는 조각</p>
+                                        </div>
+									</li>
+								</ul>
+							</div>
+							<!-- //masonry layout 리스트 -->
+                        </div>
+                    </div>
+                    <!-- // 바자아트 -->
+
+                    <!-- 신청 고정 배너영역 -->
+                    <div class="main_section">
+                        <div class="cont_inner">
+                            <div class="one_ban_swiper">
+                                <div class="swiper-wrapper">
+                                    <a href="#none" class="swiper-slide ban01" title="산책 메이트 신청">
+                                        <img class="pc_img" src="../resources/images/img-obs01.png" alt="산책 메이트 신청하시고 다양한 프로그램 참여 혜택을 누리세요!">
+                                        <img class="mo_img" src="../resources/images/img-obs01-mo.png" alt="산책 메이트 신청하시고 다양한 프로그램 참여 혜택을 누리세요!">
+                                    </a>
+                                    <a href="https://www.instagram.com/artwalk.kr/" class="swiper-slide ban01" target="_blank" title="바자 아트 인스타그램으로 링크 이동 새창">
+                                        <img class="pc_img" src="../resources/images/img-obs02.png" alt="아트 바자 인스타그램 팔로우 신청하시고 문화,예술,패션계의 다양한 소식을 산책하듯 가볍게 즐겨보세요!">
+                                        <img class="mo_img" src="../resources/images/img-obs02-mo.png" alt="아트 바자 인스타그램 팔로우 신청하시고 문화,예술,패션계의 다양한 소식을 산책하듯 가볍게 즐겨보세요!">
+                                    </a>
+                                    <a href="https://pf.kakao.com/_xaxmEXb" class="swiper-slide ban01" target="_blank" title="예술산책 카톡채널 추가 새창">
+                                        <img class="pc_img" src="../resources/images/img-obs03.png" alt="예술산책 카톡 채널 추가하시고, 매월 새로운 이벤트와 소식! 산책메이트들에게만 드리는 혜택도 놓치지 마세요!">
+                                        <img class="mo_img" src="../resources/images/img-obs03-mo.png" alt="예술산책 카톡 채널 추가하시고, 매월 새로운 이벤트와 소식! 산책메이트들에게만 드리는 혜택도 놓치지 마세요!">
+                                    </a>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 신청 고정 배너영역 D: (PC , 모바일 통이미지 스와이퍼) -->
+                </div>
+            </div>
+            <!-- //container -->
+
+            <!-- footer -->
+            <footer id="footer" class="footer">
+                <div class="footer_top">
+                    <div class="cont_inner">
+                        <div class="footer_link">
+                            <ul>
+                                <li><a href="#" target="_blank">매체소개</a></li>
+                                <li><a href="#" target="_blank">고객센터</a></li>
+                                <li><a href="#" target="_blank">포인트정책</a></li>
+                                <li class="impt"><a href="#" target="_blank">개인정보처리방침</a></li>
+                                <li><a href="#" target="_blank">이용약관</a></li>
+                                <li><a href="#" target="_blank">이메일무단수집금지</a></li>
+                                <li><a href="#" target="_blank">광고·제휴문의</a></li>
+                                <li><a href="#" target="_blank">윤리경영</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_sns">
+                            <ul>
+                                <li><a href="https://www.instagram.com/harpersbazaarkorea/" target="_blank" title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
+                                <li><a href="https://www.youtube.com/c/HarpersBAZAARKorea" target="_blank" title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
+                                <li><a href="https://www.facebook.com/bazaarkorea/" target="_blank" title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
+                                <li><a href="https://twitter.com/bazaarkorea" target="_blank" title="트위터X 바로가기"><img src="../resources/images/ico_twitter.svg" alt="트위터X"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <div class="cont_inner">
+                        <div class="footer_logo">
+                            <img src="../resources/images/logo_bazaar.svg" alt="Harper's BAZAAR">
+                        </div>
+                        <div class="footer_info">
+                            <address class="addr_wrap">
+                                <em>허스트중앙(유)</em>
+                                <div class="addr_txt">
+                                    <span class="addr">서울시 강남구 도산대로 156(논현동)</span>
+                                    <span class="ceo">대표자 : 강주연</span>
+                                    <br class="pc_br">
+                                    <span class="num">사업자등록번호 : 104-81-55280</span>
+                                    <br class="mo_br">
+                                    <span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
+                                    <span class="email">이메일 : <a href="mailto:harpersbazaarkr@hll.kr">harpersbazaarkr@hll.kr</a></span>
+                                </div>
+                            </address>
+                            <p class="copyright">© 2024 Hearst Joongang. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="family_wrap">
+                    <button type="button" class="btn_familysite"><span>Family &amp; Global</span></button>
+                    <div class="familysite">
+                        <div class="cont_inner">
+                            <div class="tab_wrap">
+                                <div class="tab_menu type02">
+                                    <ul>
+                                        <li class="on"><a href="javascript:;">FAMILY</a></li><!-- D: 선택 시 on 클래스 추가 -->
+                                        <li><a href="javascript:;">GLOBAL</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="tab_cont_wrap">
+                                    <!-- Family 탭 내용 -->
+                                    <div class="tab_cont active">
+                                        <!-- 리스트 -->
+                                        <div class="familysite_list family">
+                                            <ul>
+                                                <li><a href="#" target="_blank" title="새창열림">ELLE</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">COSMOPOLITAN</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">Harper’s BAZAAR</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">ESQUIRE</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">ELLEVOICE</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">예술산책</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">eee</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- //리스트 -->
+                                    </div>
+                                    <!-- //Family 탭 내용 -->
+
+                                    <!-- Global 탭 내용 -->
+                                    <div class="tab_cont">
+                                        <!-- 리스트 -->
+                                        <div class="familysite_list global">
+                                            <ul>
+                                                <li><a href="#" target="_blank" title="새창열림">USA</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">UNITED KINGDOM</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">SPAIN</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">NETHERLANDS</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">TAIWAN</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">JAPAN</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- //리스트 -->
+                                    </div>
+                                    <!-- //Global 탭 내용 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- //footer -->
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="../resources/js/masonry.min.js"></script>
+    <script src="../resources/js/swiper.min.js"></script>
+    <script src="../resources/js/ui.common.js"></script>
+    <script src="../resources/js/hammer.min.js"></script>
+    <!-- //js -->
+
+    <script>
+        // 현재 페이지 초기화
+        currentPage = "main";
+
+        // DOM만 다 읽어낸 후 실행할 코드
+        $(document).ready(function () {
+            setMainVisualHeight();
+        });
+
+        //iOS 메인비주얼 vh 대응
+        // 현재 창의 너비와 높이를 추적하는 변수를 초기화합니다.
+        var lastWidth = window.innerWidth;
+        var lastHeight = window.innerHeight;
+        function setMainVisualHeight() {
+            var setMainVisualVh = () => {
+                document.documentElement.style.setProperty(
+                "--mainVisualVh",
+                `${window.innerHeight}px`
+                );
+            };
+            // resize 이벤트 리스너를 추가합니다.
+            window.addEventListener('resize', function() {
+                // 새 창의 너비와 높이를 가져옵니다.
+                var newWidth = window.innerWidth;
+                var newHeight = window.innerHeight;
+
+                // 너비가 변경되었으나 높이는 변경되지 않은 경우에만 코드를 실행합니다.
+                if (newWidth !== lastWidth && newHeight === lastHeight) {
+                    // 여기에 너비가 변경되었을 때 원하는 코드를 추가합니다.
+                    console.log("너비가 변경되었으나 높이는 변경되지 않았습니다.");
+                    setMainVisualHeight();
+                }
+
+                // 최신 너비와 높이 값으로 업데이트합니다.
+                lastWidth = newWidth;
+                lastHeight = newHeight;
+            });
+            setMainVisualVh();
+        }
+
+        // 산책코스 스와이퍼 변수 초기화 반응형일 때 재생성하기 위해 글로벌 선언
+        var wcSwiper;
+            
+        // 페이지의 모든 리소스가 로드된 후 실행할 코드
+        $(window).on('load', function () {
+            var windowSize = $(window).width();
+
+            // 메인비주얼 실행(setIntervalTime)
+            mainVisual(5000, 1000);
+            
+            // 산책코스
+            $(".active_dp_swiper").activeDpSwiper();
+
+            // 아트뉴스 masonry layout
+            // $('.masonry_list .grid').masonry({
+            //     itemSelector: 'li',
+            // });
+
+            // 스크랩
+            $(".js-btn-scrap").btnScrap();
+
+            // 커뮤니티 오토스크롤
+            if (windowSize <= 768) {
+                handleMarquee(0);
+            } else {
+                handleMarquee(1, 96);
+            }
+        });
+
+        // 페이지의 모든 리소스가 리사이징 된 후 실행할 코드
+        $(window).on('resize', function () {
+            var windowSize = $(window).width();
+
+            // 오토스크롤 함수
+            if (windowSize <= 768) {
+                handleMarquee(0);
+            } else {
+                handleMarquee(1, 96);
+            }
+        })
+
+        // 메인비주얼
+        var mainVisual = function (setIntervalTime, animationTiming) {
+            var totalSlides = $('.art_main_visual .mv_slide_item').length;
+            var currentIndex = 0;
+            var autoSlideTimer;
+            var isAnimating = false; // 애니메이션이 진행 중인지 확인하는 플래그
+
+            // 페이지표시 초기화
+            for (var i = 0; i < totalSlides; i++) {
+                $('.mv_page_wrap').append('<div class="pager' + (i === 0 ? ' active' : '') + '"></div>');
+            }
+
+            // 활성화 업데이트
+            function updateSlide(direction) {
+                if (isAnimating) return; // 애니메이션이 진행 중이면 함수를 빠져나감
+                isAnimating = true; // 애니메이션 시작
+
+                $('.art_main_visual .mv_slide_item.active').addClass('active-after');
+                $('.art_main_visual .mv_slide_item').eq(currentIndex).addClass('active-before');
+                setTimeout(() => {
+                    $('.art_main_visual .mv_slide_item.active').removeClass('active active-after');
+                    $('.art_main_visual .mv_slide_item').eq(currentIndex).removeClass('active-before').addClass('active');
+                    isAnimating = false; // 애니메이션 완료
+                }, animationTiming);
+                $('.mv_page_wrap .pager').removeClass('active').eq(currentIndex).addClass('active');
+            }
+
+            // 시작
+            function startAutoSlide(setIntervalTime) {
+                autoSlideTimer = setInterval(function() {
+                currentIndex += 1;
+                if (currentIndex >= totalSlides) currentIndex = 0; // 활성화 인덱스
+                    updateSlide();
+                }, setIntervalTime); // 지정된 시간마다 작동
+            }
+
+            // 멈춤
+            function stopAutoSlide() {
+                clearInterval(autoSlideTimer);
+            }
+
+            // 이전 버튼
+            $('.art_main_visual .btn_prev').click(function() {
+                if (isAnimating) return; // 애니메이션이 진행 중이면 클릭 무시
+                stopAutoSlide();
+                currentIndex -= 1;
+                if (currentIndex < 0) currentIndex = totalSlides - 1; // 활성화 인덱스
+                updateSlide();
+                startAutoSlide(setIntervalTime) // 자동 슬라이드 재실행
+            });
+
+            // 다음 버튼
+            $('.art_main_visual .btn_next').click(function() {
+                if (isAnimating) return; // 애니메이션이 진행 중이면 클릭 무시
+                stopAutoSlide();
+                currentIndex += 1;
+                if (currentIndex >= totalSlides) currentIndex = 0; // 활성화 인덱스
+                updateSlide();
+                startAutoSlide(setIntervalTime) // 자동 슬라이드 재실행
+            });
+
+            // Hammer.js 제스처 인식 설정
+            var mainVisualElement = document.querySelector('.art_main_visual'); // 제스처를 감지할 요소
+            var hammerManager = new Hammer.Manager(mainVisualElement);
+
+            // 스와이프 인식을 위한 방향과 임계값 설정
+            hammerManager.add(new Hammer.Swipe({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 10 }));
+
+            hammerManager.on('swipeleft', function() {
+                // 사용자가 왼쪽으로 스와이프할 때 다음 슬라이드로 이동
+                $('.art_main_visual .btn_next').click();
+            });
+
+            hammerManager.on('swiperight', function() {
+                // 사용자가 오른쪽으로 스와이프할 때 이전 슬라이드로 이동
+                $('.art_main_visual .btn_prev').click();
+            });            
+
+            // 메인비주얼 실행
+            startAutoSlide(setIntervalTime);
+        }
+
+        // 커뮤니티 자동스크롤
+        var scrollAni; // 애니메이션 변수 초기화
+        function handleMarquee(setSpeed, marginBottom){
+            // 뷰포트 너비를 확인합니다.
+            const viewportWidth = window.innerWidth;
+
+            // 모바일 사이즈를 정의합니다. 이 값은 768px 미만입니다. 
+            // 하지만 프로젝트의 반응형 브레이크포인트에 따라 다를 수 있습니다.
+            const mobileSize = 768;
+
+            const marquee = document.querySelector('.c_list');
+            let speed = setSpeed;
+            let lastScrollPos = 0;
+            let timer;
+            var progress = 0;
+
+            const container = marquee.querySelector('.c_list_track');
+            const content = marquee.querySelector('.c_list_track > *');
+
+            //Get total width
+            const elHeight = content.offsetHeight;
+
+            mouseEntered = false;
+            document.querySelector('.c_list_track').addEventListener('mouseenter', function() {
+                mouseEntered = true;
+            })
+            document.querySelector('.c_list_track').addEventListener('mouseleave', function() {
+                mouseEntered = false;
+                window.cancelAnimationFrame(loop);
+            })
+
+            if (marquee.classList.contains("has_clone")) {
+                var cloneItems = document.querySelectorAll('.c_list_track .clone');
+            } else {
+                var items = document.querySelectorAll('.c_list_track .c_list_item');
+                var clonedItems = [];
+                items.forEach(function(item) {
+                    var clone = item.cloneNode(true); // 'true'는 내부 요소까지 모두 복제하겠다는 것을 의미합니다.
+                    clone.classList.add("clone")
+                    clonedItems.push(clone);
+                });
+                clonedItems.forEach(function(item) {
+                    container.appendChild(item);
+                });
+                marquee.classList.add("has_clone");
+            }
+
+            function loop(){
+                var size = marginBottom;
+                // 이후 코드는 모바일 사이즈가 아닐 때만 실행됩니다.
+                if (mouseEntered === false) {progress = progress-speed;} 
+                if (progress <= elHeight*-4-size) {progress=0;}
+                container.style.transform = 'translateY(' + progress + 'px)';
+                scrollAni = window.requestAnimationFrame(loop);
+            }
+
+            loop();
+
+            function handleSpeedClear(){
+                speed = setSpeed;
+            }
+        };
+    
+        // 산책코스 스와이퍼
+        (function($) {
+            $.fn.activeDpSwiper = function (){
+                return this.each(function (i) {
+                    var adBody = $(this);
+                    var nextBtn = adBody.find(".button_next");
+                    var prevBtn = adBody.find(".button_prev");
+                    var flag = false; // 2023-12-27 추가
+                    // 산책코스 스와이퍼 고정사이즈가 아닐 때 리사이징 할 때는 재실행을 하지 않으면 이동간격이 맞지 않음.
+                    var adSwiper;
+                    function makeSwiper() {
+                        // 기존에 Swiper 인스턴스가 존재한다면 파괴합니다.
+                        if (adSwiper !== undefined) {
+                            adSwiper.destroy(true, true); // 첫번째 파라미터는 이벤트 리스너 제거, 두번째 파라미터는 슬라이드와 스타일을 초기 상태로 돌립니다.
+                        }
+
+                        adSwiper = new Swiper(adBody, {
+                            slidesPerView: "auto",
+                            navigation: {
+                                nextEl: nextBtn,
+                                prevEl: prevBtn
+                            },
+                            loop: true,
+                            threshold: 5 // 2023-12-27 추가
+                        });
+                        adSwiper.on("slideChangeTransitionStart", function(){
+                            flag = true; // 2023-12-27 추가
+                            var activeDpBox = $(".active_dp_swiper .active-display");
+                            activeDpBox.addClass("after");
+                        });
+                        adSwiper.on('slideChangeTransitionEnd', function () {
+                            // console.log("swiper", this.realIndex);
+                            var activeDpBox = $(".active_dp_swiper .active-display");
+                            var currentImg = $(".active_dp_swiper .active-display .wc_img img");
+                            var currentCaption = $(".active_dp_swiper .active-display figcaption");
+                            var imgSrc = $(".active_dp_swiper .swiper-slide-active img").attr("src");
+                            var caption = $(".active_dp_swiper .swiper-slide-active .figcaption").text();
+                            if(flag) {// 2023-12-27 추가
+                                activeDpBox.addClass("hidden");
+                                activeDpBox.on('transitionend', function handler(e) {
+                                    // 중복 실행을 방지하기 위해 이벤트 리스너를 제거합니다.
+                                    activeDpBox.off('transitionend', handler);
+                                    activeDpBox.removeClass('after');
+
+                                    // 이미지 소스를 변경합니다. 여기서 'new-image-source.jpg'는 새 이미지 경로로 변경해야 합니다.
+                                    currentImg.attr("src", imgSrc);
+                                    currentCaption.text(caption);
+
+                                    // 이미지 로딩이 끝나면 페이드 인하고 데이터가 들어갑니다.
+                                    $(currentImg).on("load", function(){
+                                        // adBody.find("figcaption").text(data[adSwiper.realIndex].figureCaption);
+                                        activeDpBox.removeClass('hidden');
+                                    });
+                                });
+                            }
+                            flag = false; // 2023-12-27 추가
+                        });
+                    }
+                    makeSwiper(); // 초기 스와이퍼 생성
+
+                    // 리사이즈 이벤트에 대한 처리
+                    $(window).on('resize', function() {
+                        makeSwiper(); // Swiper 재생성
+                    });
+                });
+            }
+        })(jQuery);
+    </script>
+</body>
+
+</html>
